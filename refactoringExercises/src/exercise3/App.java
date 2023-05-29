@@ -6,6 +6,10 @@ public class App {
 
 		Person john = new Person();
 		// ...
-		Person manager = john.getManager();
+		// Person manager = john.getManager(); -> Errado
+        
+        // Forma correta de obter "Manager":
+        Person manager = Department.getManager();
+
 	}
 }

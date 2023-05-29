@@ -2,17 +2,9 @@ package exercise1;
 
 public class AccountType {
 
-	public static final int REGULAR_ACCOUNT = 0;
-	public static final int PREMIUM_ACCOUNT = 1;
+    // Class totally deleted since it's unnecessary
+    // This Class should be an attribute of the Class "Account", with the method "isPremmium" being
+    // a method of the class "Account"
 	
-	private int accountType;
-	
-	public boolean isPremium() {
-		if (this.accountType == PREMIUM_ACCOUNT)
-			return true;
-		return false;
-	}
-	
-	// Consider there is additional code here...
 
 }

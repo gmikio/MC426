@@ -6,10 +6,14 @@ public class Basket {
 	// ..
     // Este método não é desta classe
     // Esta classe está roubando, ou, "invejando" este método
-	float getTotalPrice(Item i) {
-		float price = i.getPrice() + i.getTax();
-		if (i.isOnSale())
-			price = price - i.getSaleDiscount() * price;
-		return price;
+
+
+	float getTotalFinalPrice(Item* items) {
+        // Meti python pra corrigir memo é isso
+        // Função *de verdade* para calcular a soma dos itens, no plural, de uma cesta de compras
+        float totalFinalPrice = 0;
+        for item in items:
+            totalFinalPrice += item.getFinalPrice();
+		return totalFinalPrice;
 	}
 }

@@ -3,11 +3,21 @@ package exercise1;
 public class Account {
 
 	// ...
-	private AccountType type;
 	private int daysOverdrawn;
 
+    public static final int REGULAR_ACCOUNT = 0;
+	public static final int PREMIUM_ACCOUNT = 1;
+	
+	private int accountType;
+	
+	public boolean isPremium() {
+		if (this.accountType == PREMIUM_ACCOUNT)
+			return true;
+		return false;
+	}
+
 	public double overdraftCharge() {
-		if (type.isPremium()) {
+		if (isPremium()) {
 			double result = 10;
 			if (daysOverdrawn > 7) {
 				result += (daysOverdrawn - 7) * 0.85;

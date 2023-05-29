@@ -23,23 +23,15 @@ public class App {
 		s.add(new Course("MC426", false));
 		s.add(new Course("MC646", true));
 		kent.setCourses(s);
-		Assert.assertEquals(2, kent.getCourses().size());
+		Assert.assertEquals(2, kent.getCoursesQuantity());
 		Course machinelearning = new Course("MC886", true);
-		kent.getCourses().add(machinelearning);
-		kent.getCourses().add(new Course("MC536", false));
-		Assert.assertEquals(4, kent.getCourses().size());
-		kent.getCourses().remove(machinelearning);
-		Assert.assertEquals(3, kent.getCourses().size());
+		kent.addCourse(machinelearning);
+		kent.addCourse(new Course("MC536", false));
+		Assert.assertEquals(4, kent.getCoursesQuantity());
+		kent.removeCourse(machinelearning);
+		Assert.assertEquals(3, kent.get);
 
-		Iterator iter = kent.getCourses().iterator();
-		int count = 0;
-		while (iter.hasNext()) {
-			Course each = (Course) iter.next();
-			if (each.isAdvanced()) {
-				count++;
-			}
-		}
-		System.out.print("Advanced courses: " + count);
+		System.out.print("Advanced courses: " + kent.getAdvancedCoursesQuantity());
 	}
 
 }

@@ -7,9 +7,10 @@ public class Person {
 	public void setDepartment(Department arg) {
 		department = arg;
 	}
-
-	public Person getManager() { // Desnecessario -> Mover para a classe "Department" mesmo
-		return department.getManager();
-	}
+    
+    // Desnecessario -> Manter apenas na classe "Department" 
+	// public Person getManager() { 
+        // 	return department.getManager();
+	// }
 
 }
